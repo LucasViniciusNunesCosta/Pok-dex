@@ -1,42 +1,54 @@
-import { Component, OnInit, } from '@angular/core';
-import {Pokemon} from 'src/app/PokeInterface'
+import { Component, OnInit } from '@angular/core';
+import { Pokemon } from 'src/app/PokeInterface';
 import { ConsumindoAPIService } from 'src/app/consumindo-api.service';
 
 @Component({
   selector: 'card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
 
-  limit: number = 10;
-  offset: number = 10;
-  url: string = `https://pokeapi.co/api/v2/pokemon/?offset=${this.offset}&limit=${this.limit}"`;
-
   pokemon?: Pokemon;
-  dados: any;
 
-  constructor(private service: ConsumindoAPIService) { }
+  dados: any;
+  Pokemon_detalhes: any[] = [];
+  url: any;
+
+  constructor(private service: ConsumindoAPIService) {}
 
   ngOnInit(): void {
-    this.service.getPokemon('1').subscribe(
-      {
-        next: (res) => {
-          this.pokemon = {
-            id: res.id,
-            name: res.name,
-            height: res.height,
-            weight: res.weight,
-            sprites: res.sprites,
-            types: res.types,
-          }
-          this.dados = this.pokemon
-        },
-         //retorna a resposta
-        error: (err) => console.log(err) //em caso de erro
-      }
-    )
-    
-  }
+    this.service.getPokemon().subscribe({
+      next: (res) => {
+        //atribuindo a resposta recebida para a variavel dados
+        this.dados = res.results;
 
+        //pegando o tamanho do array retornado
+        const pokemonsEncontrados = this.dados.length;
+
+        //criando um laço de repetição para pegar os detalhes de cada pokemon
+        for (let i: number = 0; i < pokemonsEncontrados; i++) {
+          this.url = this.dados[i].url;
+
+          this.service.getPokeDetalhes(this.url).subscribe({
+            next: (retorno) => {
+              this.pokemon = {
+                id: retorno.id,
+                name: retorno.name,
+                height: retorno.height,
+                weight: retorno.weight,
+                sprites: retorno.sprites,
+                types: retorno.types,
+              };
+              //inserindo os detalhes dos pokemons no array detalhes
+              this.Pokemon_detalhes[i] = this.pokemon;
+            },
+            error: (err) => console.log('DEU RUIM'), //em caso de erro
+          });
+        }
+      },
+      //retorna a resposta
+      error: (err) => console.log(err), //em caso de erro
+    });
+  }
 }

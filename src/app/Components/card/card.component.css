@@ -10,6 +10,7 @@
     justify-content: space-around;
     padding: 2rem;
     border-radius: 20px;
+    margin-bottom: 1rem;
 }
 .card__pokemon-image-container{
     width: 80%;
@@ -32,4 +33,5 @@
     font-size: 1.8rem;
     line-height: 150%;
     color: #2F3133;
+    text-transform: capitalize;
 }
