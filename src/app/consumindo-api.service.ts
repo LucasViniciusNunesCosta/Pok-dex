@@ -11,13 +11,20 @@ export class ConsumindoAPIService {
 
   private baseUrl: string = '';
   pokedata: any;
+  pokeDetails: any;
+  pokemon?: Pokemon;
 
   constructor(private http: HttpClient) {
     this.baseUrl = environment.pokeApi;
   }
 
-  getPokemon(pokemonName: string):Observable<Pokemon>{
-    this.pokedata = this.http.get<Pokemon>(`${this.baseUrl}${pokemonName}`)
+  getPokemon():Observable<any>{
+    this.pokedata = this.http.get<any>(this.baseUrl)
     return this.pokedata;
+  }
+  getPokeDetalhes(detalhes: string):Observable<any>{
+    this.pokeDetails = this.http.get<any>(detalhes)
+    console.log(detalhes);
+    return this.pokeDetails;
   }
 }
