@@ -1,13 +1,13 @@
-<div class="card__container" *ngFor="let Dado_pokemon of Pokemon_detalhes">
+<div class="card__container">
     <div class="card__pokemon-image-container">
-        <img [src]="Dado_pokemon.sprites.other.dream_world.front_default" alt="" class="card__pokemon-image">
+        <img [src]="Pokedetalhes.sprites.other.dream_world.front_default" alt="" class="card__pokemon-image">
     </div>
     <div class="card__details">
         <div class="details__number-container">
-            <span class="card__pokemon-number">#{{Dado_pokemon.id}}</span>
+            <span class="card__pokemon-number">#{{Pokedetalhes.id}}</span>
         </div>
         <div class="details__name-type">
-            <Span class="card__pokemon-name">{{Dado_pokemon.name}}</Span>
+            <Span class="card__pokemon-name">{{Pokedetalhes.name}}</Span>
             <img src="https://codeboost.com.br/projetos/pokeapi/img/grass.svg" alt="" class="card__pokemon-type">
         </div>
     </div>
