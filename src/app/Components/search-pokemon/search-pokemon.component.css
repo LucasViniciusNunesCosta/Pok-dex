@@ -1,0 +1,26 @@
+.search-pokemon__container{
+    display: flex;
+    height: 40vh;
+    padding-top: 119px;
+    padding-left: 24px;
+    padding-right: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-pokemon__text{
+    font-weight: bold;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    letter-spacing: -0.01em;
+    color: #2F3133;
+    max-width: 26.5rem;
+}
+.search-pokemon__input{
+    height: 56px;
+    width: 30vw;
+    color: #A0AFBA;
+    font-size: 1rem;
+    border-radius: 122px;
+    padding: 5px;
+    border: none;
+}
