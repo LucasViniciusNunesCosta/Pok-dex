@@ -3,7 +3,7 @@ import { Pokemon } from 'src/app/PokeInterface';
 import { ConsumindoAPIService } from 'src/app/consumindo-api.service';
 
 @Component({
-  selector: 'lista-pokemon',
+  selector: 'listaPokemon',
   templateUrl: './lista-pokemon.component.html',
   styleUrls: ['./lista-pokemon.component.css']
 })
