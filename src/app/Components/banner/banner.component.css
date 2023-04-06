@@ -1,0 +1,33 @@
+.banner__container{
+    height: 100vh;
+    background-image: url(’../../../../../assets/images/bg-red.svg);
+}
+.banner__top{
+    padding: 2rem;
+}
+.banner-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner-title{
+    font-size: 5.5rem;
+    color: #fff;
+    line-height: 7.8rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+.banner-description{
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #FFFFFF;
+    text-align: center;
+}
+.banner__image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

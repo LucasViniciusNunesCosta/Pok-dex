@@ -8,13 +8,15 @@ import { CardComponent } from './Components/card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import {SearchPokemonComponent} from './Components/search-pokemon/search-pokemon.component'
 import { ListaPokemonComponent } from './Components/lista-pokemon/lista-pokemon.component';
+import { BannerComponent } from './Components/banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CardComponent,
     ListaPokemonComponent,
-    SearchPokemonComponent
+    SearchPokemonComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
