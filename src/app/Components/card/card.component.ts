@@ -13,5 +13,6 @@ export class CardComponent implements OnInit {
   @Input() Pokedetalhes: any;
   
   ngOnInit(): void {
+
   }
 }
