@@ -14,6 +14,9 @@ export class ConsumindoAPIService {
   pokeDetails: any;
   pokemon?: Pokemon;
 
+  limit: number = 0;
+  offset: number = 0;
+
   constructor(private http: HttpClient) {
     this.baseUrl = environment.pokeApi;
   }
