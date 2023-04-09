@@ -9,16 +9,15 @@ import {Pokemon} from 'src/app/PokeInterface'
 })
 export class ConsumindoAPIService {
 
-  private baseUrl: string = '';
   pokedata: any;
   pokeDetails: any;
   pokemon?: Pokemon;
 
-  limit: number = 0;
+  limit: number = 20;
   offset: number = 0;
-
+  baseUrl: string = `https://pokeapi.co/api/v2/pokemon?limit=${this.limit}&offset=${this.offset}`
+  
   constructor(private http: HttpClient) {
-    this.baseUrl = environment.pokeApi;
   }
 
   getPokemon():Observable<any>{
@@ -29,5 +28,9 @@ export class ConsumindoAPIService {
     this.pokeDetails = this.http.get<any>(detalhes)
     console.log(detalhes);
     return this.pokeDetails;
+  }
+  MorePokemon(){
+    this.limit = this.limit+20;
+    this.baseUrl = `https://pokeapi.co/api/v2/pokemon?limit=${this.limit}&offset=${this.offset}`
   }
 }
