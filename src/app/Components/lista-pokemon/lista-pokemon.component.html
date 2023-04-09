@@ -1,8 +1,11 @@
 <section class="lista-pokemons__container">
   <div class="lista-pokemon__head">
-    <p class="lista-pokemon__head-text">20 Pokémons</p>
+    <p class="lista-pokemon__head-text">1279 Pokémons</p>
   </div>
   <section class="lista-pokemons">
     <card *ngFor="let Dado_pokemon of Pokemon_detalhes" [Pokedetalhes]="Dado_pokemon" ></card>
   </section>
+  <div class="btn-MaisPokemon__container">
+    <button class="btn-MaisPokemon" (click)="MaisPokemons()">Mais Pokemons</button>
+  </div>
 </section>

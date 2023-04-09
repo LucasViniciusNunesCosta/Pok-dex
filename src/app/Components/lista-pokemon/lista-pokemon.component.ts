@@ -50,4 +50,8 @@ export class ListaPokemonComponent implements OnInit {
       error: (err) => console.log(err), //em caso de erro
     });
   }
+  MaisPokemons(){
+    this.service.MorePokemon();
+      this.ngOnInit()
+    };
 }

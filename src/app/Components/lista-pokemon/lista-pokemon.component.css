@@ -19,3 +19,22 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+.btn-MaisPokemon{
+    border: 0;
+    background-color: #e2e7f0;
+    width: 19rem;
+    line-height: 4.5rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 6.8rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: -0.01em;
+    color: #3F5DB3;
+    border-radius: 6px;
+}
+.btn-MaisPokemon:hover{
+    background-color: #3F5DB3;
+    color: #fff;
+    cursor: pointer;
+}
