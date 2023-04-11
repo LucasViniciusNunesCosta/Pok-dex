@@ -16,12 +16,23 @@
     color: #2F3133;
     max-width: 26.5rem;
 }
-.search-pokemon__input{
+.container__input{
     height: 56px;
     width: 30vw;
-    color: #A0AFBA;
-    font-size: 1rem;
+    padding: .7rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
     border-radius: 122px;
-    padding: 5px;
+}
+.search-pokemon__input{
+    color: #A0AFBA;
+    background-color: transparent;
+    font-size: 1rem;
     border: none;
+}
+.search-pokemon__button{
+    border: none;
+    padding: 1rem;
+    border-radius: 50%;
 }

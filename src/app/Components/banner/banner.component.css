@@ -1,6 +1,8 @@
 .banner__container{
-    height: 100vh;
+    max-height: 100vh;
     background-image: url(’../../../../../assets/images/bg-red.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .banner__top{
     padding: 2rem;
