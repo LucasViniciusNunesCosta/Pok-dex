@@ -1,14 +1,26 @@
 <div class="card__container">
+  <a [routerLink]="['viewPokemon']">
     <div class="card__pokemon-image-container">
-        <img [src]="Pokedetalhes.sprites.other.dream_world.front_default" alt="" class="card__pokemon-image">
+      <img
+        [src]="Pokedetalhes.sprites.other.dream_world.front_default"
+        alt=""
+        class="card__pokemon-image"
+      />
     </div>
     <div class="card__details">
-        <div class="details__number-container">
-            <span class="card__pokemon-number">#{{Pokedetalhes.id}}</span>
-        </div>
-        <div class="details__name-type">
-            <Span class="card__pokemon-name">{{Pokedetalhes.name}}</Span>
-            <img src="../../../assets/images/image-types/{{Pokedetalhes.types[0].type.name}}.svg" alt="" class="card__pokemon-type">
-        </div>
+      <div class="details__number-container">
+        <span class="card__pokemon-number">#{{ Pokedetalhes.id }}</span>
+      </div>
+      <div class="details__name-type">
+        <Span class="card__pokemon-name">{{ Pokedetalhes.name }}</Span>
+        <img
+          src="../../../assets/images/image-types/{{
+            Pokedetalhes.types[0].type.name
+          }}.svg"
+          alt=""
+          class="card__pokemon-type"
+        />
+      </div>
     </div>
+  </a>
 </div>
