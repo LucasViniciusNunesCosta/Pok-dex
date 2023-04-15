@@ -1,24 +1,24 @@
 <section class="view__container">
     <div class="view__pokemon-banner">
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg" alt="" class="pokemon-photo">
+        <img [src]="img" alt="" class="pokemon-photo">
     </div>
     <div class="view__pokemon-details">
         <div>
-            <span class="pokemon-details__name">Wartortle</span>
-            <span class="pokemon-details__number">#001</span>
+            <span class="pokemon-details__name">{{nome}}</span>
+            <span class="pokemon-details__number">#{{id}}</span>
         </div>
         <ul class="pokemon-details__especificacoes-container">
             <li class="pokemon-details__especificacoes">
                 <span>Height</span>
-                <strong>1m</strong>
+                <strong>???</strong>
             </li>
             <div class="pokemon-details__especificacoes">
                 <span>Weight</span>
-                <strong>22.5kg</strong>
+                <strong>???</strong>
             </div>
             <div class="pokemon-details__especificacoes">
                 <span>Abilities</span>
-                <strong>Torrent</strong>
+                <strong>???</strong>
             </div>
         </ul>
         <div>
@@ -26,8 +26,10 @@
                 <p>Weaknesses</p>
             </div>
             <div class="pokemon-details__fraqueza-types">
-                <span>Grass</span>
-                <span>Eletric</span>
+                <ul>
+                    <li>???</li>
+                    <li>???</li>
+                </ul>
             </div>
         </div>
     </div>
