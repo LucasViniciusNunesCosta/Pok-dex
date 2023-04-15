@@ -1,6 +1,7 @@
 a{
     text-decoration: none;
     color: #2F3133;
+    
 }
 .card__container{
     box-sizing: border-box;
@@ -24,10 +25,11 @@ a{
     border-radius: 200px;
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 .card__pokemon-image{
     height: auto;
-    width: 70%;
+    width: 60%;
 }
 .details__name-type{
     display: flex;

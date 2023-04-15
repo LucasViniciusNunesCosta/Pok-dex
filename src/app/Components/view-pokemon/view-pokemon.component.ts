@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view-pokemon',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewPokemonComponent implements OnInit {
 
-  constructor() { }
+nome: any = "";
+id: any = "";
+img: any = "";
+
+  constructor(private rotaAtiva: ActivatedRoute) {
+    this.rotaAtiva.paramMap.subscribe((rotaAtiva) => {
+      this.nome = this.rotaAtiva.snapshot.paramMap.get('nome');
+      this.id = this.rotaAtiva.snapshot.paramMap.get('id');
+      this.img = this.rotaAtiva.snapshot.paramMap.get('img');
+  });
+  }
 
   ngOnInit(): void {
   }
